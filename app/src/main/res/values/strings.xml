@@ -7,4 +7,7 @@
     <string name="title_events">Events</string>
     <string name="title_places">Places</string>
     <string name="title_accommodations">Accommodations</string>
+    <string name="btn_show_on_map">SHOW ON MAP</string>
+    <string name="tv_description_label">Description</string>
+    <string name="b_write_review">Write a review</string>
 </resources>
