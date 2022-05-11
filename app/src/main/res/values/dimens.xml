@@ -5,13 +5,26 @@
 
     <dimen name="button_end_margin">16dp</dimen>
 
+    <dimen name="card_view_list_item_corner_radius">4dp</dimen>
+
+    <dimen name="margin_4dp">4dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="margin_16dp">16dp</dimen>
     <dimen name="margin_24dp">24dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
 
     <dimen name="module_title_text_size">24sp</dimen>
     <dimen name="rating_text_size">18sp</dimen>
     <dimen name="card_view_label_text_size">16sp</dimen>
+    <dimen name="card_view_label_list_item_text_size">20sp</dimen>
+    <dimen name="card_view_list_item_rating_text_size">16sp</dimen>
     <dimen name="button_review_text_size">12sp</dimen>
+
+
+    <dimen name="module_list_item_image_height">200dp</dimen>
+
+    <dimen name="video_view_height">240dp</dimen>
+
+    <dimen name="view_pager_height">280dp</dimen>
 
 </resources>

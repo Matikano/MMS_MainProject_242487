@@ -1,8 +1,8 @@
 package pl.edu.pwr.lab4.i242487.model
 
-data class Event(
-    val name: String,
-    val description: String,
-    val latLong: Pair<Double, Double>,
-    val images: List<String>
-)
+class Event(name: String,
+            description: String,
+            address: String,
+            latLong: Pair<Double, Double>,
+            images: List<String>,
+            ) : ModuleModel(name, description, address, latLong, images)
