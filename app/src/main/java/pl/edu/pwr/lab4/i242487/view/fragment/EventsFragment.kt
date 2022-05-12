@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import pl.edu.pwr.lab4.i242487.databinding.FragmentEventsBinding
-import pl.edu.pwr.lab4.i242487.model.Accommodation
 import pl.edu.pwr.lab4.i242487.model.Event
-import pl.edu.pwr.lab4.i242487.model.RomeCityData
-import pl.edu.pwr.lab4.i242487.view.activity.AccommodationActivity
+import pl.edu.pwr.lab4.i242487.model.dummyData.RomeCityData
 import pl.edu.pwr.lab4.i242487.view.activity.EventActivity
 import pl.edu.pwr.lab4.i242487.view.adapter.ModuleRecyclerViewAdapter
 
@@ -36,7 +34,7 @@ class EventsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val accommodationsAdapter = ModuleRecyclerViewAdapter(this@EventsFragment).apply {
+        val accommodationsAdapter = ModuleRecyclerViewAdapter(requireContext()).apply {
             itemList(RomeCityData.events())
             onItemClick = {
                 val intent = Intent(context, EventActivity::class.java).apply{

@@ -16,4 +16,6 @@
     <string name="btn_cancel">Cancel</string>
     <string name="review_submission">Thank you for your review submission!</string>
     <string name="review_choose_rating">Please, choose rating value</string>
+    <string name="tv_places_label">Places</string>
+    <string name="btn_show_tour">SHOW TOUR</string>
 </resources>

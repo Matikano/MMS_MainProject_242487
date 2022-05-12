@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import pl.edu.pwr.lab4.i242487.databinding.ViewPagerItemBinding
 
-class ViewPagerAdapter(
+class ImagesViewPagerAdapter(
     private val activity: AppCompatActivity,
     private val images: List<String>
-) : RecyclerView.Adapter<ViewPagerAdapter.ImageViewHolder>() {
+) : RecyclerView.Adapter<ImagesViewPagerAdapter.ImageViewHolder>() {
 
     inner class ImageViewHolder(val binding: ViewPagerItemBinding) : RecyclerView.ViewHolder(binding.root)
 

@@ -24,7 +24,7 @@
 
     <dimen name="module_list_item_image_height">200dp</dimen>
 
-    <dimen name="video_view_height">240dp</dimen>
+    <dimen name="video_view_height">260dp</dimen>
 
     <dimen name="view_pager_height">280dp</dimen>
 

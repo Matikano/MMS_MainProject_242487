@@ -1,16 +1,12 @@
 package pl.edu.pwr.lab4.i242487.view.activity
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
 import pl.edu.pwr.lab4.i242487.databinding.ActivityAccommodationBinding
 import pl.edu.pwr.lab4.i242487.model.Accommodation
-import pl.edu.pwr.lab4.i242487.model.Place
-import pl.edu.pwr.lab4.i242487.view.adapter.ViewPagerAdapter
+import pl.edu.pwr.lab4.i242487.view.adapter.ImagesViewPagerAdapter
 import pl.edu.pwr.lab4.i242487.view.dialog.ReviewDialogFragment
-import java.util.*
 
 class AccommodationActivity : AppCompatActivity() {
 
@@ -42,7 +38,7 @@ class AccommodationActivity : AppCompatActivity() {
 
     private fun setupUI() {
 
-        val viewPagerAdapter = ViewPagerAdapter(this, accommodation.images)
+        val viewPagerAdapter = ImagesViewPagerAdapter(this, accommodation.images)
 
         mBinding.apply {
             toolbarPlace.setNavigationOnClickListener {

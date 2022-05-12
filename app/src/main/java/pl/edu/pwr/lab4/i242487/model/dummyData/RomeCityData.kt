@@ -1,6 +1,10 @@
-package pl.edu.pwr.lab4.i242487.model
+package pl.edu.pwr.lab4.i242487.model.dummyData
 
 import pl.edu.pwr.lab4.i242487.R
+import pl.edu.pwr.lab4.i242487.model.Accommodation
+import pl.edu.pwr.lab4.i242487.model.Event
+import pl.edu.pwr.lab4.i242487.model.Place
+import pl.edu.pwr.lab4.i242487.model.TourGuide
 
 object RomeCityData {
 

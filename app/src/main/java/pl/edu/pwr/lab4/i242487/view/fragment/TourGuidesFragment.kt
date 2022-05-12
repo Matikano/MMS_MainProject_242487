@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import pl.edu.pwr.lab4.i242487.databinding.FragmentTourGuidesBinding
-import pl.edu.pwr.lab4.i242487.model.RomeCityData
+import pl.edu.pwr.lab4.i242487.model.dummyData.RomeCityData
 import pl.edu.pwr.lab4.i242487.view.activity.TourGuideActivity
 import pl.edu.pwr.lab4.i242487.view.adapter.TourAdapter
 

@@ -8,7 +8,7 @@ import android.speech.tts.TextToSpeech
 import android.widget.MediaController
 import pl.edu.pwr.lab4.i242487.databinding.ActivityPlaceBinding
 import pl.edu.pwr.lab4.i242487.model.Place
-import pl.edu.pwr.lab4.i242487.view.adapter.ViewPagerAdapter
+import pl.edu.pwr.lab4.i242487.view.adapter.ImagesViewPagerAdapter
 import pl.edu.pwr.lab4.i242487.view.dialog.ReviewDialogFragment
 import java.util.*
 
@@ -45,12 +45,16 @@ class PlaceActivity : AppCompatActivity() {
             setAnchorView(mBinding.vvVideo)
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
         setupUI()
     }
 
     private fun setupUI() {
 
-        val viewPagerAdapter = ViewPagerAdapter(this, place.images)
+        val viewPagerAdapter = ImagesViewPagerAdapter(this, place.images)
 
         mBinding.apply {
             toolbarPlace.setNavigationOnClickListener {

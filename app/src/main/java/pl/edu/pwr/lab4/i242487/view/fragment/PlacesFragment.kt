@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import pl.edu.pwr.lab4.i242487.databinding.FragmentPlacesBinding
 import pl.edu.pwr.lab4.i242487.model.Place
-import pl.edu.pwr.lab4.i242487.model.RomeCityData
+import pl.edu.pwr.lab4.i242487.model.dummyData.RomeCityData
 import pl.edu.pwr.lab4.i242487.view.activity.PlaceActivity
 import pl.edu.pwr.lab4.i242487.view.adapter.ModuleRecyclerViewAdapter
 
@@ -34,7 +34,7 @@ class PlacesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val placesAdapter = ModuleRecyclerViewAdapter(this@PlacesFragment).apply {
+        val placesAdapter = ModuleRecyclerViewAdapter(requireContext()).apply {
             itemList(RomeCityData.places())
             onItemClick = {
                 item -> val intent = Intent(context, PlaceActivity::class.java).apply{

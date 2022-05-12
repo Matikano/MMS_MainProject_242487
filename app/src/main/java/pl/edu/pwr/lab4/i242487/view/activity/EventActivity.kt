@@ -3,12 +3,9 @@ package pl.edu.pwr.lab4.i242487.view.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import pl.edu.pwr.lab4.i242487.databinding.ActivityAccommodationBinding
 import pl.edu.pwr.lab4.i242487.databinding.ActivityEventBinding
-import pl.edu.pwr.lab4.i242487.model.Accommodation
 import pl.edu.pwr.lab4.i242487.model.Event
-import pl.edu.pwr.lab4.i242487.view.adapter.ViewPagerAdapter
-import pl.edu.pwr.lab4.i242487.view.dialog.ReviewDialogFragment
+import pl.edu.pwr.lab4.i242487.view.adapter.ImagesViewPagerAdapter
 
 class EventActivity : AppCompatActivity() {
 
@@ -40,7 +37,7 @@ class EventActivity : AppCompatActivity() {
 
     private fun setupUI() {
 
-        val viewPagerAdapter = ViewPagerAdapter(this, event.images)
+        val viewPagerAdapter = ImagesViewPagerAdapter(this, event.images)
 
         mBinding.apply {
             toolbarPlace.setNavigationOnClickListener {

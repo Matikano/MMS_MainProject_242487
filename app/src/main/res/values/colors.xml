@@ -12,4 +12,6 @@
   <color name="secondaryTextColor">#ffffff</color>
 
   <color name="ratingColor">#FFEB3B</color>
+  <color name="routecolor">#FF5722</color>
+
 </resources>
