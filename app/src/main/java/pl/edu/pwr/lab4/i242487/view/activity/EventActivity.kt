@@ -17,7 +17,6 @@ class EventActivity : AppCompatActivity() {
     }
 
     private lateinit var mBinding: ActivityEventBinding
-
     private lateinit var event: Event
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,14 +55,13 @@ class EventActivity : AppCompatActivity() {
             cpCircleIndicator.setViewPager(vpImages)
 
             fabMap.setOnClickListener {
-
                 val intent = Intent(this@EventActivity, MapActivity::class.java).apply {
                     putExtra(MapActivity.BUNDLE_KEY_MODEL, event)
+                    putExtra(MapActivity.BUNDLE_KEY_MODE, MapActivity.MODE_SINGLE_MARKER)
                 }
 
                 startActivity(intent)
             }
-
         }
     }
 }

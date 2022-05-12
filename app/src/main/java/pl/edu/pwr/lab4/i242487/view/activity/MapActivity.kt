@@ -12,18 +12,27 @@ import com.google.android.gms.maps.model.MarkerOptions
 import pl.edu.pwr.lab4.i242487.R
 import pl.edu.pwr.lab4.i242487.databinding.ActivityMapBinding
 import pl.edu.pwr.lab4.i242487.model.ModuleModel
+import pl.edu.pwr.lab4.i242487.model.TourGuide
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     companion object{
         const val BUNDLE_KEY_MODEL = "model"
-        const val ZOOM_FACTOR = 13f
+        const val BUNDLE_KEY_TOUR = "tour"
+        const val BUNDLE_KEY_MODE = "mode"
+
+        const val MODE_SINGLE_MARKER = "single_marker"
+        const val MODE_ROUTE = "route"
+
+        const val ZOOM_FACTOR = 14.5f
     }
 
-    private lateinit var mMap: GoogleMap
     private lateinit var mBinding: ActivityMapBinding
 
     private lateinit var moduleModel: ModuleModel
+    private lateinit var tourGuide: TourGuide
+
+    private var mode: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +40,17 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         mBinding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        moduleModel = intent.getSerializableExtra(BUNDLE_KEY_MODEL) as ModuleModel
 
+        intent.apply {
+            mode = getStringExtra(BUNDLE_KEY_MODE)
+            when(mode){
+                MODE_SINGLE_MARKER ->
+                    moduleModel = getSerializableExtra(BUNDLE_KEY_MODEL) as ModuleModel
+
+                MODE_ROUTE ->
+                    tourGuide = getSerializableExtra(BUNDLE_KEY_TOUR) as TourGuide
+            }
+        }
 
         setSupportActionBar(mBinding.toolbarMap)
         supportActionBar?.apply {
@@ -55,19 +73,25 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
      * This callback is triggered when the map is ready to be used.
      * This is where we can add markers or lines, add listeners or move the camera. In this case,
      * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
-        val position = LatLng(
-            moduleModel.latLong.first,
-            moduleModel.latLong.second
-        )
 
-        googleMap.addMarker(MarkerOptions().position(position).title(moduleModel.address))
+        when(mode){
+            MODE_SINGLE_MARKER ->{
+                val position = LatLng(
+                    moduleModel.latLong.first,
+                    moduleModel.latLong.second
+                )
 
-        val newLatLngZoomed = CameraUpdateFactory.newLatLngZoom(position, ZOOM_FACTOR)
-        googleMap.animateCamera(newLatLngZoomed)
+                googleMap.addMarker(MarkerOptions().position(position).title(moduleModel.address))
+
+                val newLatLngZoomed = CameraUpdateFactory.newLatLngZoom(position, ZOOM_FACTOR)
+                googleMap.animateCamera(newLatLngZoomed)
+            }
+            MODE_ROUTE ->{
+                //TODO: implement showing route direction functionality
+            }
+
+        }
     }
 }

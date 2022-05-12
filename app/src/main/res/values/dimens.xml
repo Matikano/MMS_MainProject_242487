@@ -19,6 +19,7 @@
     <dimen name="card_view_label_list_item_text_size">20sp</dimen>
     <dimen name="card_view_list_item_rating_text_size">16sp</dimen>
     <dimen name="button_review_text_size">12sp</dimen>
+    <dimen name="tour_list_item_places_count_text_size">18sp</dimen>
 
 
     <dimen name="module_list_item_image_height">200dp</dimen>
@@ -26,5 +27,7 @@
     <dimen name="video_view_height">240dp</dimen>
 
     <dimen name="view_pager_height">280dp</dimen>
+
+    <dimen name="tour_list_item_place_icon_size">32dp</dimen>
 
 </resources>

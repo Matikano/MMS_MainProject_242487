@@ -70,6 +70,7 @@ class PlaceActivity : AppCompatActivity() {
 
                 val intent = Intent(this@PlaceActivity, MapActivity::class.java).apply {
                     putExtra(MapActivity.BUNDLE_KEY_MODEL, place)
+                    putExtra(MapActivity.BUNDLE_KEY_MODE, MapActivity.MODE_SINGLE_MARKER)
                 }
 
                 startActivity(intent)

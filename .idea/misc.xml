@@ -9,13 +9,16 @@
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/activity_map.xml" value="0.2859375" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/activity_place.xml" value="0.34646739130434784" />
+        <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/activity_tour_guide.xml" value="0.34646739130434784" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/fragment_accommodations.xml" value="0.18931159420289856" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/fragment_accomodation.xml" value="0.2635416666666667" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/fragment_events.xml" value="0.2635416666666667" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/fragment_guides.xml" value="0.2635416666666667" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/fragment_places.xml" value="0.33" />
+        <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/fragment_tour_guides.xml" value="0.34646739130434784" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/module_list_item.xml" value="0.34646739130434784" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/review_dialog.xml" value="0.5" />
+        <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/tour_item.xml" value="0.34646739130434784" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/layout/view_pager_item.xml" value="0.34646739130434784" />
         <entry key="..\:/GitHubRepo/MMS_MainProject_242487/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2635416666666667" />
       </map>

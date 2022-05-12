@@ -19,10 +19,7 @@ class AccommodationActivity : AppCompatActivity() {
     }
 
     private lateinit var mBinding: ActivityAccommodationBinding
-
     private lateinit var accommodation: Accommodation
-
-    private lateinit var textToSpeech: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +62,7 @@ class AccommodationActivity : AppCompatActivity() {
 
                 val intent = Intent(this@AccommodationActivity, MapActivity::class.java).apply {
                     putExtra(MapActivity.BUNDLE_KEY_MODEL, accommodation)
+                    putExtra(MapActivity.BUNDLE_KEY_MODE, MapActivity.MODE_SINGLE_MARKER)
                 }
 
                 startActivity(intent)

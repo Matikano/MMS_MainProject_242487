@@ -160,4 +160,31 @@ object RomeCityData {
                 )
             )
         )
+
+    fun tours(): List<TourGuide> {
+        val places = places()
+
+        return listOf(
+            TourGuide(
+                "Rome full antique guide",
+                "Discover the most interesting and breathtaking antiques of Rome! You will get a professional tour guide around most famous Ancient Roman architecture." +
+                        "\nYou will experience unforgettable while exploring buildings like Colosseo, Basilica Papale di Santa Maria Maggiore, Pantheon, Fontanna di Trevi and Castel Sant'Angelo. ",
+                places
+            ),
+            TourGuide(
+                "Senior pilgrimage tour",
+                "Take a part in our newest Senior Tour. It is a short route starting with exploring and touring Basilica Papale di Santa Maria Maggiore with an unique opportunity in participating in the holy mass." +
+                        "\nAfter that join us in a easy walk to the Trevi Fountain where you can rest in peace.",
+                listOf(places[1], places[2])
+            ),
+            TourGuide(
+                "In the footsteps of the legionnaires",
+                "Join us in a very thrilling and exciting tour around places once guarded by Roman Legionnaires." +
+                        "\n This tour is especially dedicated for children, since our Tour Guide is dressed as one of the Ancient Roman Soldiers." +
+                        "\n You will discover a magnificent places such as Colosseum, Pantheon and Castel Sant'Angelo",
+                listOf(places[0], places[3], places[4])
+            )
+        )
+    }
+
 }

@@ -13,9 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.activity.EventActivity"
+            android:name=".view.activity.TourGuideActivity"
             android:theme="@style/CustomNoActionBarTheme"
             android:exported="false" />
+        <activity
+            android:name=".view.activity.EventActivity"
+            android:exported="false"
+            android:theme="@style/CustomNoActionBarTheme" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
